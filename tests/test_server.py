@@ -3,7 +3,7 @@ import json
 import requests
 import pytest
 
-from helpers.constants import server_ip, server_port, api
+from constants import server_ip, server_port, api
 
 
 # @pytest.mark.skip

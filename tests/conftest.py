@@ -1,7 +1,7 @@
 import pytest
 import logging as logger
 import requests
-from helpers.constants import api
+from constants import api
 
 
 @pytest.fixture()

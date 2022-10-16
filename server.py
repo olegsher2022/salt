@@ -1,6 +1,6 @@
-from flask import Flask, request
+from flask import Flask
 from flask_restful import Api, Resource
-from helpers.constants import server_ip, server_port
+from constants import server_ip, server_port
 
 
 class Main(Resource):
