@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Run server
           # This assumes pytest is installed via the install-package step above
-          command: nohup python3 server.py > log.txt 2>&1 &
+          command: nohup python3 server.py
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above

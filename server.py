@@ -14,4 +14,5 @@ api.add_resource(Main, "/api/info")
 api.init_app(app)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=f'{server_port}', host=f'{server_ip}')
+    app.run(debug=True)
+    #app.run(debug=True, port=f'{server_port}', host=f'{server_ip}')
