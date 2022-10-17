@@ -11,7 +11,7 @@ from constants import api, server_ip, server_port
 def is_server_up():
     logger.info("Checking server")
     try:
-        requests.get(f'http://{server_ip}:{server_port + 1}/api/{api}')
+        requests.get(f'http://{server_ip}:{server_port}/api/{api}')
         logger.info(f"Server is reachable, response code 200")
     except requests.exceptions.ConnectionError as e:
         logger.error(f"ERROR {e}")
