@@ -5,7 +5,7 @@ from constants import server_ip, server_port
 
 class Main(Resource):
     def get(self):
-        return {"version": 0.2, "name": "salt"}
+        return {"version": 0.1, "name": "salt"}
 
 
 app = Flask(__name__)
