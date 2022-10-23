@@ -56,3 +56,10 @@ oleg@i5:~/workspace/docker$
 ACCESS DOCKER:
 oleg@i5:~/workspace/docker$ docker exec -it  4e2818b1d7cb /bin/bash
 root@4e2818b1d7cb:/app# 
+
+
+SERVER UP/DOWN
+instead of shutdown / up server, iptables rule can be used like:
+iptables -A INPUT -p tcp --destination-port 5000 -j DROP
+docker should be started with:
+docker run ubuntu_min --privileged
