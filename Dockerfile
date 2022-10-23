@@ -1,9 +1,10 @@
-FROM python:3.10
-COPY ./requirements.txt /app/requirements.txt
+FROM ubuntu:latest
+RUN apt-get -y update  && apt-get install -y python3.10  python3-pip wget
 WORKDIR /app
-RUN pip3 install -r requirements.txt
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
 COPY . /app
-# ENTRYPOINT [ "python3" ]
-EXPOSE 5000
-# CMD ["flask" "--app server.py" "run" "--host 0.0.0.0" "--port 5000"]
+RUN rm -rf __pycache__
+RUN rm -rf .pytest_cache
+RUN rm -rf .venv
 CMD ["python3" , "./server.py" ]
