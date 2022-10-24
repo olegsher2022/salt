@@ -10,7 +10,7 @@ import pandas as pd
 
 class Main(Resource):
     def get(self, company, date):
-        if company == "0":
+        if company == "0" and date == "head":
             data = pd.read_csv('math_students.csv', delimiter=',')
             return data.head().to_json(orient="records")
         else:

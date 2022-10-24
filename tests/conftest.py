@@ -9,7 +9,7 @@ from constants import api, server_ip, server_port
 def is_server_up():
     logger.info(f"********* Test Setup *********")
     try:
-        res = requests.get(f'http://{server_ip}:{server_port}/api/info/0')
+        res = requests.get(f'http://{server_ip}:{server_port}/api/{api}/0/head')
         logger.info(f"Server response code is {res.status_code}")
         yield json.loads(res.content)
     except requests.exceptions.ConnectionError as e:
